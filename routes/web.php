@@ -35,7 +35,8 @@ route::post('/articles', 'ArticlesController@store');
 Route::get('/articles/create', 'ArticlesController@create');
 Route::get('/articles/{article}', 'ArticlesController@show');
 Route::get('/articles/{article}/edit', 'ArticlesController@edit');
-Route::PATCH('/articles/create', 'ArticlesController@update');
+Route::patch('/articles/{article}', 'ArticlesController@update');
+Route::delete('/articles/{article}', 'ArticlesController@destroy');
 
 
 

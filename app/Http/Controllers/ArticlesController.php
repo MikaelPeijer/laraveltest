@@ -69,7 +69,7 @@ public function update(Article $article)
     //$article = Article::find($id);
     
   
-    return derirect('/articles/' . $article->id);
+    return redirect('/articles/' . $article->id);
 
 // persist the edited resource
 }
@@ -87,9 +87,11 @@ public function validateArticle()
 
 
 
-public function destroy()
+public function destroy($id)
 {
-// delete the resource
+$article= article::findOrFail($id);
+$article->delete();
+return redirect('/articles')->with('succes', 'post removed');
 }
 
 

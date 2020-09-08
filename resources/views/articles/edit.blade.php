@@ -13,7 +13,7 @@
 <form  method="POST"   action="/articles/{{ $article->id }}">
 @csrf
 
-@method('PATCH')
+@method('patch')
 
  <div class="field">
  <tabel class="label"  for="title">title</tabel>
