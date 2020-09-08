@@ -4,9 +4,15 @@
 <div id="wrapper">
 	<div id="page" class="container">
 		<div id="content">
+	
+	<div class="knop">
+	 <a href="/articles/{{ $article->id }}/edit"  class="button is-link" aria-pressed="true">edit</a>
+</div>
 			<div class="title">
 				<h2>{{ $article->title }}</h2>
-			{{ $article->body }}
+				<h4>{{ $article->excerpt }}</h4>
+			
+		<p>	{{ $article->body }}</p>
 		</div>
 		<pstyle="margin-top 1em"> 
 		@foreach ($article->tags as $tag)

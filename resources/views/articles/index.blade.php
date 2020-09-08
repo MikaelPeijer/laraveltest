@@ -3,14 +3,15 @@
 @section ('content')
 <div id="wrapper">
 	<div id="page" class="container">
-	<button> <a href="articles/create" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">create</a></button>
-    @forelse ($articles as $article)
+	
+
+	<div class="">
+	 <a href="articles/create" class="button is-link"  role="button" aria-pressed="true">create</a>
+
+    
+	@forelse ($articles as $article)
 		<div id="content">
 			<div class="title">
-			<h2>
-			<a href="/articles/1">eerste article</a> 
-			</h2>
-			
 				<h2>
 				<a href="/articles/{{ $article->id }}">{{ $article->title }}</a>
 				

@@ -5,11 +5,6 @@ namespace App\Http\Controllers;
 use App\Article;
 use App\Tag;
 use Illuminate\Http\Request;
-?>
-
-
-
-<?php
 
 class ArticlesController extends Controller
 {
@@ -58,13 +53,13 @@ public function store()
 
     //persist the new resource
 }
-public function edit(Article $article)
+public function edit( $id   )//Article $article
 {
 
     $article = Article::find($id);
 
 
-    return view('articles.edit', compact('article'));
+    return view('articles.edit', ['article'=>$article ]);
     
 // show a view to edit an existing resource
 }
