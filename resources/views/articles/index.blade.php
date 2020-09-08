@@ -7,7 +7,14 @@
     @forelse ($articles as $article)
 		<div id="content">
 			<div class="title">
-				<h2>{{ $article->title }}</h2>
+			<h2>
+			<a href="/articles/1">eerste article</a> 
+			</h2>
+			
+				<h2>
+				<a href="/articles/{{ $article->id }}">{{ $article->title }}</a>
+				
+				</h2>
 			{{ $article->body }}
 		
 
